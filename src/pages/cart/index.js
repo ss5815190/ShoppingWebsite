@@ -1,5 +1,6 @@
 import {useContext}from'react';
 import MyContext from '../../compontents/MyContext.js';
+import './style/cartpage.css'
 const Cartpage=()=>{
 	const { cart, setCart } = useContext(MyContext);
 	const { totalPrice, setTotalPrice } = useContext(MyContext);
