@@ -1,0 +1,51 @@
+
+.commodity{
+	background-color: rgba(10, 10, 70, 1.0);
+	position: relative;
+}
+.commodity .cart{
+	color: white;
+	font-size: 20px;
+	display: flex;
+	position: absolute;
+	top: 20px;
+	right: 50px;
+}
+.commodity .quantity{
+	color: red;
+	margin: 0;
+}
+.item{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.item-grid{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 250px;
+	height: 350px;
+	border-style: solid;
+	border-color: white;
+	margin-top: 5vw;
+	color: white;
+	overflow: auto;
+}
+img{
+	width: 250px;
+	
+}
+.title  {
+	width: 90%;
+	margin-bottom: 20px;
+}
+.description{
+	width: 90%;
+	margin-bottom: 20px;
+}
+.price{
+	width: 90%;
+	margin-bottom: 30px;
+}
