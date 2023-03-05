@@ -1,12 +1,13 @@
 import Commodity from'./cpmponents/commodity.js';
-import {useState,useEffect,createContext}from'react';
+import MyContext from '../../compontents/MyContext.js';
+import {useState,useEffect,useContext}from'react';
 const Homee=()=>{
-	const MyContext = createContext();
-	const [data, setData] = useState([]);
+	
   	const [isLoading, setIsLoading] = useState(true);
-  	const [cart, setCart] = useState([]);//購物車
-  	const [totalPrice, setTotalPrice] = useState(0);
-
+  	const { data, setData } = useContext(MyContext);
+  	const { cart, setCart } = useContext(MyContext);//購物車
+  	const { totalPrice, setTotalPrice } = useContext(MyContext);
+  	
   	// 加入商品
   	const AddToCart = (product) => {
     setCart([...cart, product]);
