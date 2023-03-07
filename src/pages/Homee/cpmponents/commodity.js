@@ -5,13 +5,15 @@ const Commodity=({data,AddToCart,cart})=>{
 	
 	return(
 		<div className="commodity">
-			<Link to="cartpage">
-				<div className="cart">
-				<i className="fa-solid fa-cart-shopping"></i>
-				購物車(<p className="quantity">{cart.length}</p>
-				)
-				</div>
-			</Link>
+			<div className="nav">
+				<Link to="cartpage">
+					<div className="cart">
+					<i className="fa-solid fa-cart-shopping"></i>
+					購物車(<p className="quantity">{cart.length}</p>
+					)
+					</div>
+				</Link>
+			</div>
 			<div className="item">
 				{
 					data.map((product)=>(

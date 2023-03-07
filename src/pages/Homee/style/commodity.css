@@ -3,27 +3,37 @@
 	background-color: rgba(10, 10, 70, 1.0);
 	position: relative;
 }
+.commodity .nav{
+	background-color: gray;
+	z-index: 10;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	}
 .commodity .cart{
 	color: white;
 	font-size: 20px;
 	display: flex;
-	position: absolute;
+	position: fixed;
 	top: 20px;
 	right: 50px;
 }
 .commodity .quantity{
 	color: red;
 	margin: 0;
+	font-weight: bold;
 }
 .item{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	padding-top: 50px;
 }
 .item-grid{
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	
 	align-items: center;
 	width: 250px;
 	height: 350px;
@@ -32,6 +42,7 @@
 	margin-top: 5vw;
 	color: white;
 	overflow: auto;
+	position: relative;
 }
 img{
 	width: 250px;
@@ -39,13 +50,28 @@ img{
 }
 .title  {
 	width: 90%;
-	margin-bottom: 20px;
+	height: 15%;
+	margin-top: 20px;
 }
 .description{
 	width: 90%;
-	margin-bottom: 20px;
+	height: 50%;
 }
 .price{
 	width: 90%;
-	margin-bottom: 30px;
+	height: 10%;
+}
+.commodity .item button{
+	position: absolute;
+	bottom: 20px;
+}
+@media (max-width: 640px) {
+	.item{
+		padding-top: 30px;
+	}
+	.item-grid{
+		width: 80%;
+		height: 450px;
+		margin-top: 60px;
+	}
 }
