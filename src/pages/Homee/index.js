@@ -9,8 +9,13 @@ const Homee=()=>{
   	const { totalPrice, setTotalPrice } = useContext(MyContext);
   	
   	// 加入商品
-  	const AddToCart = (product) => {
-    setCart([...cart, product]);
+  	const AddToCart = (product,Quantity) => {
+    setCart([...cart, {id:product.id,
+								    	description:product.description,
+								    	images:product.images,
+								    	price:product.price,
+								    	quantity:Quantity,
+								    	title:product.title}]);
     setTotalPrice(totalPrice + product.price);
   };
 

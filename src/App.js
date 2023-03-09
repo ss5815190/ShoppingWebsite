@@ -9,7 +9,8 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
 
   return (
-    <MyContext.Provider value={{data,setData,cart,setCart,totalPrice,setTotalPrice}}>
+    <MyContext.Provider value={{data,setData,cart,setCart,totalPrice,
+    setTotalPrice}}>
     <HashRouter>
 
       <Routes>
