@@ -8,9 +8,10 @@ const Cartpage=()=>{
 	const deleteItem = (index) => {//刪除商品
     const newCart = [...cart];
     const itemPrice = newCart[index].price;
+    const itemquantity= newCart[index].quantity;
     newCart.splice(index, 1);
     setCart(newCart);
-    setTotalPrice(totalPrice - itemPrice);
+    setTotalPrice(totalPrice - itemPrice*itemquantity);
   };
 
 	return(
@@ -20,7 +21,7 @@ const Cartpage=()=>{
 	      <ul>
 	        {cart.map((product, index) => (
 	          <li key={index}>
-	            {product.title} - {product.price}元{' '}
+	            {product.title} -  {product.price}元{' '} X {product.quantity} 
 	            <button onClick={() => deleteItem(index)}>刪除</button>
 	          </li>
 	        ))}

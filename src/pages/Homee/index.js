@@ -10,7 +10,7 @@ const Homee=()=>{
   	
   	// 加入商品
   	const AddToCart = (product,Quantity) => {
-	  	if(Quantity!==0){
+	  	if(Quantity===1){
 				setCart([...cart, {id:product.id,
 									    	description:product.description,
 									    	images:product.images,
@@ -19,8 +19,15 @@ const Homee=()=>{
 									    	title:product.title}]);
 	    	setTotalPrice(totalPrice + product.price);
 	  	}
-	   
-    
+	  	if(Quantity>1){
+	  		for(let i=0;i<cart.length;i++)
+    			if(product.id===cart[i].id){
+    				let newCart=[...cart]
+						newCart[i].quantity=Quantity
+						setCart(newCart)
+						setTotalPrice(totalPrice + product.price);
+    			} 
+    	}		
   };
 
 	
