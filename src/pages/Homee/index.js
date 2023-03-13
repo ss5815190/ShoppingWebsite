@@ -10,6 +10,7 @@ const Homee=()=>{
   	
   	// 加入商品
   	const AddToCart = (product,Quantity) => {
+  		Quantity+=1
 	  	if(Quantity===1){
 				setCart([...cart, {id:product.id,
 									    	description:product.description,
@@ -27,7 +28,8 @@ const Homee=()=>{
 						setCart(newCart)
 						setTotalPrice(totalPrice + product.price);
     			} 
-    	}		
+    	}	
+
   };
 
 	
