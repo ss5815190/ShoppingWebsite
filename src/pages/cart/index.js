@@ -39,16 +39,18 @@ const Cartpage=()=>{
 	      <ul>
 	        {cart.map((product, index) => (
 	          <li key={index}>
-	            {product.title} -  {product.price}元{' '} 數量 
+	          	<div className="p_title">{product.title}</div>
+	          	<div className="p_price">{product.price}元</div>
+	    
 	            <button onClick={() => deCreaseItem(index)}>-</button>
-	            {product.quantity} 
+	            <div className="p_quantity">數量 {product.quantity} </div>
 	            <button onClick={() => inCreaseItem(index)}>+</button>
 
-	            <button onClick={() => deleteItem(index)}>刪除</button>
+	            <button onClick={() => deleteItem(index)}>全部刪除</button>
 	          </li>
 	        ))}
 	      </ul>
-	      <p>總價格：{totalPrice}元</p>
+	      <div className="tt_price">總價格：{totalPrice}元</div>
 	      
 	    </div>
 	    </MyContext.Provider>
