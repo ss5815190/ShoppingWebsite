@@ -35,7 +35,7 @@ const CartItem=({title,description,price,product,AddToCart,cart,setCart})=>{
 		)
 }
 
-const Commodity=({data,AddToCart,cart,setCart})=>{/*
+const Commodity=({data,AddToCart,cart,setCart})=>{
 	const CartAmount=()=>{//購物車總數量
 		let amount=0
 		if(cart.length!==0)
@@ -48,14 +48,14 @@ const Commodity=({data,AddToCart,cart,setCart})=>{/*
     // 在購物車數量更新後執行
      CartAmount();
 	
-  }, [cart]);*/
+  }, [cart]);
 	return(
 		<div className="commodity">
 			<div className="nav">
 				<Link to="cartpage">
 					<div className="cart">
 					<i className="fa-solid fa-cart-shopping"></i>
-					購物車(<p className="quantity">{cart.length}</p>
+					購物車(<p className="quantity">{CartAmount()}</p>
 					)
 					</div>
 				</Link>
