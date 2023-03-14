@@ -10,27 +10,7 @@
 	background-color: rgba(10, 10, 70, 1.0);
 	position: relative;
 }
-.commodity .nav{
-	background-color: gray;
-	z-index: 10;
-	height: 60px;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	}
-.commodity .cart{
-	color: white;
-	font-size: 20px;
-	display: flex;
-	position: fixed;
-	top: 20px;
-	right: 50px;
-}
-.commodity .quantity{
-	color: red;
-	margin: 0;
-	font-weight: bold;
-}
+
 .item{
 	display: flex;
 	flex-wrap: wrap;

@@ -1,6 +1,7 @@
 import Commodity from'./cpmponents/commodity.js';
+import Nav from'./cpmponents/nav.js';
 import MyContext from '../../compontents/MyContext.js';
-import {useState,useEffect,useContext}from'react';
+import {useContext}from'react';
 const Homee=()=>{
 	
   	const {isLoading} = useContext(MyContext);
@@ -40,7 +41,8 @@ const Homee=()=>{
 	return(
 		<MyContext.Provider value={{ data,setData,cart,setCart,totalPrice,setTotalPrice}}>
 			<div className="homee">
-				<Commodity data={data} AddToCart={AddToCart} cart={cart} setCart={setCart}/>
+				<Nav/>
+				<Commodity AddToCart={AddToCart}/>
 			</div>
 		 </MyContext.Provider>
 		)

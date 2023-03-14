@@ -1,0 +1,21 @@
+ .nav{
+	background-color: gray;
+	z-index: 10;
+	height: 60px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	}
+ .cart{
+	color: white;
+	font-size: 20px;
+	display: flex;
+	position: fixed;
+	top: 20px;
+	right: 50px;
+}
+ .quantity{
+	color: red;
+	margin: 0;
+	font-weight: bold;
+}

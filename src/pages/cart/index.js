@@ -13,14 +13,14 @@ const Cartpage=()=>{
     setCart(newCart);
     setTotalPrice(totalPrice - itemPrice*itemquantity);
   };
-  const inCreaseItem=(index)=>{
+  const inCreaseItem=(index)=>{//增加商品數量
   	const newCart = [...cart];
     const itemPrice = newCart[index].price;
     newCart[index].quantity+=1;
     setCart(newCart);
     setTotalPrice(totalPrice + itemPrice);
   }
-  const deCreaseItem=(index)=>{
+  const deCreaseItem=(index)=>{//減少商品數量
   	const newCart = [...cart];
     const itemPrice = newCart[index].price;
     newCart[index].quantity-=1;
@@ -33,7 +33,7 @@ const Cartpage=()=>{
     setTotalPrice(totalPrice - itemPrice);
   }
 	return(
-		<MyContext.Provider value={{ cart,setCart,totalPrice,setTotalPrice}}>
+		
 			<div className="cartpage">
 	      <h2>購物車</h2>
 	      <ul>
@@ -53,7 +53,7 @@ const Cartpage=()=>{
 	      <div className="tt_price">總價格：{totalPrice}元</div>
 	      
 	    </div>
-	    </MyContext.Provider>
+	    
 		)
 }
 export default Cartpage;

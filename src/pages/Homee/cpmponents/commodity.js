@@ -1,7 +1,6 @@
-import '../style/commodity.css'
-import { Link } from "react-router-dom";
-import {useState,useEffect}from'react';
-
+import '../style/commodity.css';
+import {useState,useContext}from'react';
+import MyContext from '../../../compontents/MyContext.js';
 /**/
 
 const CartItem=({title,description,price,product,AddToCart,cart,setCart})=>{
@@ -27,9 +26,9 @@ const CartItem=({title,description,price,product,AddToCart,cart,setCart})=>{
   
 	return(
 		<div className="item-grid"  >
-			<div className="title">{`name : ${title}`}</div>
-			<div className="description">{description}</div>
-			<div className="price">{`price :$ ${price}`}</div>
+			<div className="title">{`name : ${product.title}`}</div>
+			<div className="description">{product.description}</div>
+			<div className="price">{`price :$ ${product.price}`}</div>
 			<div className="itemquantity">數量: {findItemQuantity()}</div>
 			<button style={{display:Quantity===0?"block":"nne"}} 
 			onClick={()=>AddToCart(product, Quantity)}>加入購物車</button>
@@ -38,38 +37,18 @@ const CartItem=({title,description,price,product,AddToCart,cart,setCart})=>{
 		)
 }
 
-const Commodity=({data,AddToCart,cart,setCart})=>{
-	const CartAmount=()=>{//購物車總數量
-		let amount=0
-		if(cart.length!==0)
-			for(let i=0;i<cart.length;i++){
-				amount+=cart[i].quantity
-			}
-			return amount;
-	}
-	useEffect(() => {
-    // 在購物車數量更新後執行
-     CartAmount();
+const Commodity=({AddToCart})=>{
+
+	const {data,cart,setCart} = useContext(MyContext);
 	
-  }, [cart]);
 	return(
 		<div className="commodity">
-			<div className="nav">
-				<Link to="cartpage">
-					<div className="cart">
-					<i className="fa-solid fa-cart-shopping"></i>
-					購物車(<p className="quantity">{CartAmount()}</p>
-					)
-					</div>
-				</Link>
-			</div>
 			<div className="item">
 				{
 					data.map((product)=>(
 			
-						<CartItem key={product.id} title={product.title} 
-						description={product.description} AddToCart={AddToCart}
-						price={product.price}product={product}cart={cart}setCart={setCart}/>
+						<CartItem key={product.id} AddToCart={AddToCart}
+						product={product}cart={cart}setCart={setCart}/>
 					))}
 			</div>
 		</div>
