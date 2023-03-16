@@ -43,7 +43,7 @@ const Cartpage=()=>{
 	          	<div className="p_price">{product.price}元</div>
 	    
 	            <button onClick={() => deCreaseItem(index)}>-</button>
-	            <div className="p_quantity">數量 {product.quantity} </div>
+	            <div className="p_quantity">數量: {product.quantity} </div>
 	            <button onClick={() => inCreaseItem(index)}>+</button>
 
 	            <button onClick={() => deleteItem(index)}>全部刪除</button>

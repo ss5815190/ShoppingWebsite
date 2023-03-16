@@ -27,7 +27,8 @@ button{
 }
 .cartpage li .p_quantity{
 	width: 10%;
-	display: contents
+	display: contents;
+	
 }
 .cartpage .tt_price{
 	margin-top: 8vw;

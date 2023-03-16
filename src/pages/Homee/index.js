@@ -39,12 +39,10 @@ const Homee=()=>{
     return <div className="loading">Loading...</div>;
   }
 	return(
-		<MyContext.Provider value={{ data,setData,cart,setCart,totalPrice,setTotalPrice}}>
 			<div className="homee">
 				<Nav/>
 				<Commodity AddToCart={AddToCart}/>
-			</div>
-		 </MyContext.Provider>
+			</div>	 
 		)
 }
 export default Homee;
