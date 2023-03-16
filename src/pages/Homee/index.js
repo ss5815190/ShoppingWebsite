@@ -1,11 +1,11 @@
-import Commodity from'./cpmponents/commodity.js';
-import Nav from'./cpmponents/nav.js';
+import Commodity from'./components/commodity.js';
+import Nav from'./components/nav.js';
 import MyContext from '../../compontents/MyContext.js';
 import {useContext}from'react';
 const Homee=()=>{
 	
   	const {isLoading} = useContext(MyContext);
-  	const { data, setData } = useContext(MyContext);
+  	/*const { data, setData } = useContext(MyContext);*/
   	const { cart, setCart } = useContext(MyContext);//購物車
   	const { totalPrice, setTotalPrice } = useContext(MyContext);
   	

@@ -46,7 +46,7 @@ const Nav=()=>{
 						const searchTerm=Svalue.toLowerCase();//全變小寫好辨識
 						const fullName=item.title.toLowerCase();
 						return searchTerm&&fullName.startsWith(searchTerm)&&fullName!==searchTerm;
-					})
+					}).slice(0,10)//讓推薦結果顯示前10個
 					.map((el)=>(
 						<div onClick={()=>onSearch(el.title)}
 						className="dropdownName" key={el.id}>{el.title}</div>
@@ -55,7 +55,7 @@ const Nav=()=>{
 				
 			</div>
 
-			<Link to="cartpage">
+			<Link to="/cartpage">
 				<div className="cart">
 				<i className="fa-solid fa-cart-shopping"></i>
 				<div>購物車</div>

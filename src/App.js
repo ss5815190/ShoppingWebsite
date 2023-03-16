@@ -1,6 +1,7 @@
 import { HashRouter, Route, Routes } from "react-router-dom";
 import Homee from"./pages/Homee";
 import Cartpage from "./pages/cart";
+import Searchpage from"./pages/searchpage";
 import MyContext from './compontents/MyContext.js';
 import {useState,useEffect}from'react';
 function App() {
@@ -23,9 +24,10 @@ function App() {
     setTotalPrice,isLoading}}>
     <HashRouter>
 
-      <Routes>
+      <Routes>{/**/}
         <Route path="/" exact element={<Homee />} />
         <Route path="/cartpage" element={<Cartpage />} />
+        <Route path="/:name" element={<Searchpage />} />
       </Routes>
       
     </HashRouter>

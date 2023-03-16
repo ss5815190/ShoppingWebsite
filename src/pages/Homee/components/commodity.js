@@ -3,7 +3,7 @@ import {useState,useContext}from'react';
 import MyContext from '../../../compontents/MyContext.js';
 /**/
 
-const CartItem=({title,description,price,product,AddToCart,cart,setCart})=>{
+const CartItem=({product,AddToCart,cart,setCart})=>{
 	const [Quantity, setQuantity] = useState(0);
 	const findItemQuantity=()=>{//尋找購物車內該商品的數量
 		if(cart.length!==0)
