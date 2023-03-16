@@ -27,7 +27,7 @@
 	max-width: 400px;
 	min-width: 120px;
 	top: 29px;
-	
+	display: block;
 }
 .nav .search .dropdown .dropdownName{
 	cursor: pointer;

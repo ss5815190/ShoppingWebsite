@@ -22,6 +22,15 @@ const Nav=()=>{
   	const onSearch=(Term)=>{//當按下推薦搜尋列表
   		setSvalue(Term);
   	}
+  	document.onclick=(e)=>{
+  		const dropdown=document.getElementById("dropdown");
+  		if(e.target.className!=="input"&&e.target.className!=="dropdownName")	
+			dropdown.style.display="none";
+  		if(e.target.className==="input")
+  			dropdown.style.display="block";
+  		
+
+  	}
 	const CartAmount=()=>{//購物車總數量
 		let amount=0
 		if(cart.length!==0)
@@ -39,9 +48,9 @@ const Nav=()=>{
 		<div className="nav">
 			<div className="search">
 				
-				<input type="search" placeholder="search" 
+				<input className="input" type="search" placeholder="search" 
 				value={Svalue} onChange={onChange} onKeyDown={handleKeyDown}/>
-				<div className="dropdown">
+				<div className="dropdown" id="dropdown">
 					{data.filter(item =>{
 						const searchTerm=Svalue.toLowerCase();//全變小寫好辨識
 						const fullName=item.title.toLowerCase();
