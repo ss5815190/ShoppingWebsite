@@ -20,6 +20,9 @@
 	min-width: 120px;
 	height: 30px;
 }
+.nav .search .searchButton{
+	height: 32px;
+}
 .nav .search .dropdown{
 	position: absolute;
 	background-color: rgba(240, 240, 240, 1.0);
@@ -54,10 +57,15 @@
 	}
 	.nav .search{
 		font-size: 14px;
-
+		transform: translateX(-20%);
 	}
 	.nav .search input{
 		width: 50vw;
+	}
+	.nav .search .searchButton{
+		height: 30px;
+		width: 35px;
+		
 	}
 	.nav .search .dropdown{
 		width: 50vw;

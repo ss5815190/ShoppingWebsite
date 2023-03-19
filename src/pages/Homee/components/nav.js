@@ -11,12 +11,15 @@ const Nav=()=>{
 	const onChange=(e)=>{//input欄位發生變化
 		setSvalue(e.target.value);
 	}
-	const handleKeyDown = (e) => {//當搜尋欄按下enter鍵
-	    if (e.key === 'Enter') {
-	      //Get input value
+	const search=()=>{//搜尋
+		//Get input value
 	      setUpdated(Svalue);
 	      navigate(`/search=${Svalue}`);//切換url
 	      console.log(Svalue)
+	}
+	const handleKeyDown = (e) => {//當搜尋欄按下enter鍵
+	    if (e.key === 'Enter') {
+	      search();
     	}
   	};
   	const onSearch=(Term)=>{//當按下推薦搜尋列表
@@ -61,6 +64,9 @@ const Nav=()=>{
 						className="dropdownName" key={el.id}>{el.title}</div>
 						))}
 				</div>
+				<button onClick={()=>search()} className="searchButton">
+					<i className="fa fa-search" aria-hidden="true"></i>
+				</button>
 				
 			</div>
 
